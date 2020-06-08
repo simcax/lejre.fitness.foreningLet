@@ -1,1 +1,1 @@
-web: gunicorn foreninglet:app
+web: gunicorn foreninglet:app.py
