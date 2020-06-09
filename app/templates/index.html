@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             {% for activity in activities %}
-            <tr><td>{{ activity.name }}</td><td>{{ activity.price }}</td><td><a class="pure-button" href="https://{{ unionId }}.foreninglet.dk/memberportal/teamenrollment/subscribe/{{ activity.id }}">Tilmeld</a></td></tr>
+            <tr><td>{{ activity.name }}</td><td>{{ activity.price }}</td><td><a class="pure-button" href="https://{{ unionId }}.foreninglet.dk/memberportal/teamenrollment/subscribe/{{ activity.id }}" target="_PARENT">Tilmeld</a></td></tr>
             {% endfor %}
         </table>
     </body>
