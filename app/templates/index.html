@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lejre Fitness - Aktiviteter {{ title }}</title>
+    </head>
+    <body>
+        <table class="pure-table">
+            <tr>
+            <th>Aktivitet</th><th>Pris</th><th> </th>
+            </tr>
+            {% for activity in activities %}
+            <tr><td>{{ activity.name }}</td><td>{{ activity.price }}</td><td><a href="https://{{ unionId }}.foreninglet.dk/memberportal/teamenrollment/subscribe/{{ activity.id }}">Tilmeld</a></td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
