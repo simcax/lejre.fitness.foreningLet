@@ -6,9 +6,11 @@
     </head>
     <body>
         <table class="pure-table">
-            <tr>
-            <th>Aktivitet</th><th>Pris</th><th> </th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Aktivitet</th><th>Pris</th><th> </th>
+                </tr>
+            </thead>
             {% for activity in activities %}
             <tr><td>{{ activity.name }}</td><td>{{ activity.price }}</td><td><a class="pure-button" href="https://{{ unionId }}.foreninglet.dk/memberportal/teamenrollment/subscribe/{{ activity.id }}">Tilmeld</a></td></tr>
             {% endfor %}
