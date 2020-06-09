@@ -2,3 +2,4 @@
 .vscode/launch.json
 config/dev.env
 __pycache__
+env
