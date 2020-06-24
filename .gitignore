@@ -3,3 +3,4 @@
 config/dev.env
 __pycache__
 env
+env/*

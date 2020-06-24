@@ -44,7 +44,7 @@ def _makeActivityTable(jsonObject):
     activity_json = json.loads(jsonObject)
     outActivities = list()
     for activity in activity_json:
-        if activity['Name'] not in ('Teknik','Undervisning af instruktør'):
+        if activity['Name'] in ('Indmeldelse','Helårs medlemsskab - fornyelse','Halvårs medlemsskab - fornyelse','Fornyelse Senior 2 mdr. medlemsskab'):
             for specifics in activity['ExternalDescriptions']:
                 if specifics['Headline'] == 'Pris':
                     price = specifics['Text']
@@ -55,4 +55,5 @@ def _makeActivityTable(jsonObject):
                     'id': activity['ActivityId']
                 }
             outActivities.append(actDict)
+    
     return outActivities
