@@ -21,7 +21,9 @@ def hello_world():
     return render_template('index.html', activities=activities, unionId='3196')
     #return 'Hello World! {} - {} - {} <br> {}'.format(response.status_code, apiAuthenticated, envVar, activities)
 
-
+@app.route('/login')
+def login():
+   return "Login...."
 
 def _loginToForeningLet(apiUser,apiPass):
     url = 'https://foreninglet.dk/api/activities?version=1'
